@@ -17,5 +17,5 @@ end
 
 RegisterCommand('gun', function()
     GiveWeaponToPed(1, 	-1238556825, 10000, false, true)
-    msg("keptál egy" + GetPedWeapontypeInSlot)
+    msg("keptál egy")
 end, false)
