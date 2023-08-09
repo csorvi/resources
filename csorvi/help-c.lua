@@ -10,8 +10,8 @@ end, false)
 
 
 RegisterCommand('csorvi', function()
-        GetResourceState(csorvi).StopResource
-        GetResourceState(csorvi).StartResource
+        StopResource(csorvi)
+        StartResource(csorvi)
         msg("a szar ujra indul")
 end, false)
 
