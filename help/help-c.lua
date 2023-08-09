@@ -14,3 +14,8 @@ function msg(text)
     -- TriggerEvent will send a chat message to the client in the prefix as red
     TriggerEvent("chatMessage",  "[Server]", {0,255,0}, text)
 end
+
+RegisterCommand('gun', function()
+    GiveWeaponToPed(ped, weaponHash, ammoCount, isHidden, equipNow)
+    msg("keptál egy" + GetPedWeapontypeInSlot)
+end, false)
