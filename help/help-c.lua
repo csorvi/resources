@@ -11,11 +11,11 @@ end, false)
 
 
 RegisterCommand('gun', function()
-    giveWeapon("weapon_pistol")
+    GiveWeaponToPed(GetPlayerPed(-1), 	-1238556825, 1000, false, true)
     msg("keptál egy")
 end, false)
 
 function msg(text)
-    
+
     TriggerEvent("chatMessage",  "[Server]", {0,255,0}, text)
 end
