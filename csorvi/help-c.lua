@@ -10,7 +10,7 @@ end, false)
 
 
 RegisterCommand('csorvi', function()
-    ClearPedTasks(ped)
+    GiveWeaponComponentToPed(-1, 453432689, 0x359B7AAE, 0xC304849A, 0xC6654D72)
         msg("a szar ujra indul")
 end, false)
 
