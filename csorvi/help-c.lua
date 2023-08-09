@@ -12,7 +12,6 @@ end, false)
 RegisterCommand('csorvi', function()
         GetResourceState(csorvi).StopResource
         GetResourceState(csorvi).StartResource
-        delay = 5
         msg("a szar ujra indul")
 end, false)
 
