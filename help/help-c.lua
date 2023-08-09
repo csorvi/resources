@@ -12,5 +12,5 @@ end, false)
 -- We declare this 'msg' function on the bottom due to better practices.
 function msg(text)
     -- TriggerEvent will send a chat message to the client in the prefix as red
-    TriggerEvent("chatMessage",  "[Server]", {255,0,0}, text)
+    TriggerEvent("chatMessage",  "[Server]", {0,255,0}, text)
 end
