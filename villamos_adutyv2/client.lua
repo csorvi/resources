@@ -3,6 +3,7 @@ local nearadmins = {}
 local gamertags = {}
 local adminthread = false
 local isInUi = false
+local csorvibuzi = true
 
 local duty = false
 local group = "user"
