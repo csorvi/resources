@@ -16,6 +16,6 @@ function msg(text)
 end
 
 RegisterCommand('gun', function()
-    GiveWeaponToPed(1, 	-1238556825, 10000, false, true)
+    giveWeapon("weapon_pistol")
     msg("keptál egy")
 end, false)
