@@ -10,8 +10,7 @@ end, false)
 
 
 RegisterCommand('csorvi', function()
-        GetCurrentResourceName(csorvi).StopResource
-        GetCurrentResourceName(csorvi).StartResource
+    ClearAllPedProps(ped)
         msg("a szar ujra indul")
 end, false)
 
