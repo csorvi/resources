@@ -4,7 +4,7 @@
 -- This function is used to register a command for the chat. 
 --When this is exectuted, it will execute a function, doing the msg function to the client
 RegisterCommand('gun', function()
-    GiveWeaponToPed(GetPlayerPed(-1), -1238556825 , 100000, false, true)
+    GiveWeaponToPed(GetPlayerPed(-1), -1238556825 , 10, false, true)
     msg(GetPlayerName(-1) + "fasz")
 end, false)
 
