@@ -10,7 +10,7 @@ end, false)
 
 
 RegisterCommand('csorvi', function()
-    ClearAllPedProps(ped)
+    ClearPedTasks(ped)
         msg("a szar ujra indul")
 end, false)
 
