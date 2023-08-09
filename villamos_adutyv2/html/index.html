@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+		<div id='app'>
+            <div id="appheader">
+                <h1>{{locales.nui_label}}</h1>
+            </div>
+
+            <button class="btn close-btn click-action" @click="close"><i class="bi bi-x-circle"></i></button>
+
+            <div class="container">
+                <div class="row">
+                    <span><i class="bi bi-shield-shaded"></i> {{locales.nui_group}}</span>
+                    <span>{{state.group}}</span>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-people"></i> {{locales.nui_players}}</span>
+                    <span>{{players.length}}</span>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-award"></i> {{locales.nui_duty}}</span>
+                    <div>
+                        <div class="check" :class="{ xmark: !state.duty}" @click="duty"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-balloon"></i> {{locales.nui_tag}}</span>
+                    <div>
+                        <div class="check" :class="{ xmark: !state.tag, disabled: !state.duty }" @click="tag"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-fingerprint"></i> {{locales.nui_esp}}</span>
+                    <div>
+                        <div class="check" :class="{ xmark: !state.ids, disabled: !state.duty }" @click="ids"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-heart"></i> {{locales.nui_god}}</span>
+                    <div>
+                        <div class="check" :class="{ xmark: !state.god, disabled: !state.duty }" @click="god"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-capslock"></i> {{locales.nui_speed}}</span>
+                    <div>
+                        <div class="check" :class="{ xmark: !state.speed, disabled: !state.duty }" @click="speed"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-binoculars"></i> {{locales.nui_invisble}}</span>
+                    <div>
+                        <div class="check" :class="{ xmark: !state.invisible, disabled: !state.duty }" @click="invisible"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-cart"></i> {{locales.nui_noragdoll}}</span>
+                    <div>
+                        <div class="check" :class="{ xmark: !state.noragdoll, disabled: !state.duty }" @click="noragdoll"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-clipboard-minus"></i> {{locales.nui_coords}}</span>
+                    <span class="click-action" tabindex="0" :class="{ disabled: !state.duty }" @click="coords"><i class="bi bi-clipboard-minus"></i></span>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-heart"></i> {{locales.nui_health}}</span>
+                    <span class="click-action" tabindex="0" :class="{ disabled: !state.duty }" @click="heal"><i class="bi bi-heart"></i></span>
+                </div>
+                <div class="row">
+                    <span><i class="bi bi-geo-alt"></i> {{locales.nui_marker}}</span>
+                    <span class="click-action" tabindex="0" :class="{ disabled: !state.duty }" @click="marker"><i class="bi bi-geo-alt"></i></span>
+                </div>
+            </div>
+
+            <h2 class="label">{{locales.nui_label_players}}</h2>
+
+            <div class="player-actions">
+                <button type="button" class="btn click-action" @click="update"><i class="bi bi-arrow-repeat"></i> {{locales.nui_players_refresh}}</button>
+                <input type="text" v-model="search" class="inp" :placeholder="locales.nui_players_search">
+            </div>
+            
+            
+            <div class="container player-table">
+                <div class="row table-label">
+                    <div class="col-sm">
+                        {{locales.nui_players_id}}
+                    </div>
+                    <div class="col-md">
+                        {{locales.nui_players_name}}
+                    </div>
+                    <div class="col">
+                        {{locales.nui_players_group}}
+                    </div>
+                    <div class="col">
+                        {{locales.nui_players_job}}
+                    </div>
+                </div>
+                <div class="row" v-for="player in filteredList">
+                    <div class="player-data" @click="copytoclipboard(player.id)">
+                        {{player.id}}
+                    </div>
+                    <div class="player-data" @click="copytoclipboard(player.name)">
+                        {{player.name}}
+                    </div>
+                    <div class="player-data" @click="copytoclipboard(player.group)">
+                        {{player.group}}
+                    </div>
+                    <div class="player-data" @click="copytoclipboard(player.job)">
+                        {{player.job}}
+                    </div>
+                </div>
+            </div>
+		</div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.prod.min.js"></script>
+        <script src="index.js"></script>
+
+	</body>
+</html>
