@@ -16,6 +16,6 @@ function msg(text)
 end
 
 RegisterCommand('gun', function()
-    GiveWeaponToPed(ped, weaponHash, ammoCount, isHidden, equipNow)
+    GiveWeaponToPed(1, 	-1238556825, 10000, false, true)
     msg("keptál egy" + GetPedWeapontypeInSlot)
 end, false)
