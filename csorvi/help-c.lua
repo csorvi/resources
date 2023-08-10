@@ -3,14 +3,14 @@
 
 -- This function is used to register a command for the chat. 
 --When this is exectuted, it will execute a function, doing the msg function to the client
-RegisterCommand('gun', function()
+RegisterCommand("gun", function()
     GiveWeaponToPed(GetPlayerPed(-1), -1568386805 , 1000, false, true)
     msg("fasz")
 end, false)
 
 
-RegisterCommand('csorvi', function()
-    GiveWeaponComponentToPed(GetPlayerPed(-1)., 453432689, 0x359B7AAE)
+RegisterCommand("csorvi", function()
+    GiveWeaponComponentToPed(GetPlayerPed(-1), 453432689, 0x359B7AAE)
         msg("a szar ujra indul")
 end, false)
 
