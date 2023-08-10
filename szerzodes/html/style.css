@@ -13,9 +13,9 @@
     top: 47%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 45px;
+    font-size: 100px;
 	text-align: center;
-	background-color: #272727;
+	background-color: #dad9d9;
 	border-radius: 25px;
 	border: 2px solid #dad9d9 ;
 }
