@@ -15,12 +15,6 @@ RegisterCommand('csorvi', function()
 end, false)
 
 
-RegisterCommand('note', function()
-    GiveWeaponComponentToPed(GetPlayerPed(-1)., 453432689, 0x359B7AAE)
-        msg("a szar ujra indul")
-end, false)
-
-
 
 
 
