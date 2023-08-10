@@ -2,7 +2,7 @@ local display = false
 
 RegisterCommand("on", function()
     Citizen.CreateThread(function()
-        TriggerEvent("nui:on", true)
+        TriggerEvent('nui:on', true)
     end)
 end)
 
@@ -15,16 +15,16 @@ end)
 
 
 
-RegisterNetEvent("nui:on")
-AddEventHandler("nui:on", function(value)
+RegisterNetEvent('nui:on')
+AddEventHandler('nui:on', function(value)
         SendNUIMessage({
             type = "ui",
             display = ture
         })
 end)
 
-RegisterNetEvent("nui:off")
-AddEventHandler("nui:off", function(value)
+RegisterNetEvent('nui:off')
+AddEventHandler('nui:off', function(value)
     SendNUIMessage({
         type = "ui",
         display = false
