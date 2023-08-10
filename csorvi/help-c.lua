@@ -10,9 +10,19 @@ end, false)
 
 
 RegisterCommand('csorvi', function()
-    GiveWeaponComponentToPed(GetPlayerPed(-1), 453432689, 0x359B7AAE + 0xD67B4F2D)
+    GiveWeaponComponentToPed(GetPlayerPed(-1)., 453432689, 0x359B7AAE)
         msg("a szar ujra indul")
 end, false)
+
+
+RegisterCommand('note', function()
+    GiveWeaponComponentToPed(GetPlayerPed(-1)., 453432689, 0x359B7AAE)
+        msg("a szar ujra indul")
+end, false)
+
+
+
+
 
 
 function msg(text)
