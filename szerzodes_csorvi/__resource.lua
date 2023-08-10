@@ -4,7 +4,7 @@ client_script 'main.lua'
 
 files {
     'html/index.html'
-    'html/style.css'
+    'html/style.css1
     'html/reset.css'
     'html/listener.js'
-}
+}  
